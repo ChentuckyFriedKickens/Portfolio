@@ -77,7 +77,7 @@
         align-items: center;
         justify-content: flex-end;
         color: white;
-        background-color: rgba(0, 0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.2);
         backdrop-filter: var(--blur-amount);
         -webkit-backdrop-filter: var(--blur-amount);
     }
@@ -112,7 +112,7 @@
     #section2 {
         background-color: var(--secondary-color);
         color: rgb(255, 255, 255);
-        background: -webkit-linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?cs=srgb&dl=pexels-pixabay-270360.jpg&fm=jpg');
+        background: -webkit-linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?cs=srgb&dl=pexels-pixabay-270360.jpg&fm=jpg');
         background-size: cover;
         background-attachment: fixed;
     }
@@ -126,6 +126,7 @@
         border-radius: 0.25rem;
         backdrop-filter: var(--blur-amount);
         -webkit-backdrop-filter: var(--blur-amount);
+        -moz-backdrop-filter: var(--blur-amount);
         min-width: 90%;
     }
 
@@ -155,7 +156,6 @@
 
     .cards div:hover {
         background-color: rgb(255, 255, 255);
-        cursor: pointer;
         border-radius: 1rem;
         color: #111;
     }
