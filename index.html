@@ -25,6 +25,11 @@
 
     p, h1, h2, h3, a, img {
         animation: fadeindown 1s ease-in;
+        color: white;
+    }
+
+    .center-text * {
+        text-align: center;
     }
 
     img {
@@ -60,6 +65,10 @@
         text-align: center;
     }
 
+    .hor-center * {
+        text-align: center;
+    }
+
     .navbar {
         position: fixed;
         z-index: 10;
@@ -68,7 +77,7 @@
         align-items: center;
         justify-content: flex-end;
         color: white;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0);
         backdrop-filter: var(--blur-amount);
         -webkit-backdrop-filter: var(--blur-amount);
     }
@@ -108,6 +117,10 @@
         background-attachment: fixed;
     }
 
+    #section3 {
+        background-color: #1d1d1d;
+    }
+
     .glass-bg {
         background-color: rgba(0, 0, 0, 0.1);
         border-radius: 0.25rem;
@@ -120,7 +133,7 @@
         color: var(--blue-green);
     }
 
-    .projects {
+    .cards {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -131,6 +144,13 @@
         transition: all 0.5s;
         background-color: #222;
         flex: 1 1 160px;
+    }
+
+    .cards div img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
 
     .cards div:hover {
@@ -171,6 +191,11 @@
         }
     }
 
+    @media only screen and (max-width: 600px) {
+        
+    }
+
+
 </style>
 <body>
     <div id="navbar" class="navbar">
@@ -198,9 +223,32 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quae recusandae nihil ullam ducimus nemo repellendus culpa ad, voluptatem nobis mollitia est ex explicabo temporibus quos facere earum in at cupiditate adipisci excepturi? Cumque quasi dignissimos deleniti sit. Voluptate eum cupiditate ipsam eius error iusto sequi incidunt odio fugiat ex harum explicabo voluptas vero assumenda sint ea libero, minima maxime, rerum iste rem debitis! Quia earum id, quod dicta, deserunt quas nisi provident alias doloribus adipisci sunt eos animi non enim cupiditate nihil explicabo, at similique maiores harum sequi porro dolores corrupti. Exercitationem corrupti aut maiores dolores! Dolorum, voluptatibus quo?</p>
             </div>
         </section>
-        <section id="section3" class="projects-section section3 primary">
+        <section id="section3" class="skills flexbox-horizontal">
+            <div style="background-color: transparent;">
+                <h1 class="hor-center blue-green-text">Skills</h1>
+                <div class="cards center-text">
+                    <div>
+                        <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_256.png" alt="html_logo">
+                        <h3>
+                            HTML
+                        </h3>
+                    </div>
+                    <div>
+                        <img src="https://cdn.discordapp.com/attachments/811244621514408006/971678849974829076/198-1985012_transparent-css3-logo-png-css-logo-transparent-background-removebg-preview.png" alt="css_logo">
+                        <h3>
+                            CSS
+                        </h3>
+                    </div>
+                    <div>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" alt="">
+                        <h3>JS</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section4" class="projects-section section3 primary">
             <h1 class="hor-center blue-green-text">My Projects</h1>
-            <div class="projects cards">
+            <div class="cards">
                 <div>
                     <h2>Project name</h2>
                     <img src="" alt="project image">
