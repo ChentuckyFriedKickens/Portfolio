@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSupportScammer</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
+
+    :root {
+        --primary-color: #111;
+        --secondary-color: hsl(198, 97%, 13%);
+        --blue-green: rgb(0, 255, 238);
+        --bg-gradient-1: radial-gradient(circle, #1d1d1d 0%, rgba(17,17,17,1) 100%);
+        --blur-amount: blur(7.5px);
+    }
+    html, body {
+        font-size: 3vh;
+        font-family: 'Open Sans', sans-serif;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+    p, h1, h2, h3, a, img {
+        animation: fadeindown 1s ease-in;
+    }
+
+    img {
+        padding: 0px;
+        border-radius: 1rem;
+        max-width: 30%;
+        align-self: center;
+    }
+
+    section {
+        min-height: 70vh;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+
+    section * {
+        padding: .5rem 1rem;
+        margin: 1rem;
+    }
+
+    #section1 {
+        min-height: 100vh;
+    }
+
+    .vert-center {
+        padding-top: 25vh;
+    }
+
+    .hor-center {
+        text-align: center;
+    }
+
+    .navbar {
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: var(--blur-amount);
+        -webkit-backdrop-filter: var(--blur-amount);
+    }
+
+    .navbar button {
+        border: none;
+        background-color: transparent;
+    }
+
+    .navbar button h3 {
+        padding: 0.5rem 1rem;
+        margin: 0px;
+        animation: fadein 1s ease-in;
+        font-weight: 300;
+        font-size: 0.75rem;
+        transition: 0.3s;
+        color: white;
+    }
+
+    .navbar *:hover {
+        color: var(--blue-green);
+        font-size: 4vh;
+        cursor: pointer;
+    }
+
+    .primary {
+        background: var(--bg-gradient-1);
+        color: #ddd;
+        background-attachment: fixed;
+    }
+
+    #section2 {
+        background-color: var(--secondary-color);
+        color: rgb(255, 255, 255);
+        background: -webkit-linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg?cs=srgb&dl=pexels-pixabay-270360.jpg&fm=jpg');
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .glass-bg {
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 0.25rem;
+        backdrop-filter: var(--blur-amount);
+        -webkit-backdrop-filter: var(--blur-amount);
+        min-width: 90%;
+    }
+
+    .blue-green-text {
+        color: var(--blue-green);
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cards div {
+        border-radius: 0.25rem;
+        transition: all 0.5s;
+        background-color: #222;
+        flex: 1 1 160px;
+    }
+
+    .cards div:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+
+    .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    }
+
+    .fadeindown {
+        animation: fadeindown 1s ease-in;
+    }
+
+    @keyframes fadeindown {
+        from {
+            opacity: 0;
+            transform: translateY(-20%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+</style>
+<body>
+    <div id="navbar" class="navbar">
+        <button>
+            <h3>Home</h3>
+        </button>
+        <button>
+            <h3>About</h3>
+        </button>
+        <button>
+            <h3>Contact</h3>
+        </button>
+    </div>
+    <main>
+        <section id="section1" class="section1 primary">
+            <div class="vert-center">
+                <h3 class="blue-green-text">TIS I,</h3>
+                <h1>Tech Support Scammer</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, illo.</p>
+            </div>
+        </section>
+        <section id="section2" class="section2 secondary">
+            <h1 class="blue-green-text">About me</h1>
+            <div class="glass-bg fadeindown">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quae recusandae nihil ullam ducimus nemo repellendus culpa ad, voluptatem nobis mollitia est ex explicabo temporibus quos facere earum in at cupiditate adipisci excepturi? Cumque quasi dignissimos deleniti sit. Voluptate eum cupiditate ipsam eius error iusto sequi incidunt odio fugiat ex harum explicabo voluptas vero assumenda sint ea libero, minima maxime, rerum iste rem debitis! Quia earum id, quod dicta, deserunt quas nisi provident alias doloribus adipisci sunt eos animi non enim cupiditate nihil explicabo, at similique maiores harum sequi porro dolores corrupti. Exercitationem corrupti aut maiores dolores! Dolorum, voluptatibus quo?</p>
+            </div>
+        </section>
+        <section id="section3" class="projects-section section3 primary">
+            <h1 class="hor-center blue-green-text">My Projects</h1>
+            <div class="projects cards">
+                <div>
+                    <h2>Project name</h2>
+                    <img src="" alt="project image">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur, incidunt necessitatibus obcaecati quo doloribus quas! Mollitia delectus sequi magni incidunt quae velit blanditiis natus iste adipisci, nisi distinctio dolorem!</p>
+                </div>
+                <div>
+                    <h2>Project name</h2>
+                    <img src="" alt="project image">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur, incidunt necessitatibus obcaecati quo doloribus quas! Mollitia delectus sequi magni incidunt quae velit blanditiis natus iste adipisci, nisi distinctio dolorem!</p>
+                </div>
+                <div>
+                    <h2>Project name</h2>
+                    <img src="" alt="project image">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad consequatur, incidunt necessitatibus obcaecati quo doloribus quas! Mollitia delectus sequi magni incidunt quae velit blanditiis natus iste adipisci, nisi distinctio dolorem!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+    </script>
+</body>
+</html>
