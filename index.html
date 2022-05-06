@@ -15,6 +15,7 @@
         --blue-green: rgb(0, 255, 238);
         --bg-gradient-1: radial-gradient(circle, #1d1d1d 0%, rgba(17,17,17,1) 100%);
         --blur-amount: blur(7.5px);
+        --nav-bg: rgba(0, 0, 0, 0.2);
     }
     html, body {
         font-size: 2.8vh;
@@ -25,7 +26,8 @@
     }
 
     p, h1, h2, h3, a, img {
-        animation: fadeindown 1s ease-in;
+        overflow: hidden;
+        animation: slide-up 1s ease-in;
     }
 
     .center-text * {
@@ -68,17 +70,29 @@
         text-align: center;
     }
 
+    .nav-check {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        padding: 0px;
+        height: 0.5px;
+        width: 100vw;
+        background-color: transparent;
+    }
+
     .navbar {
         position: fixed;
+        top: 0px;
         z-index: 10;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         color: white;
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: var(--nav-bg);
         backdrop-filter: var(--blur-amount);
         -webkit-backdrop-filter: var(--blur-amount);
+        transition: all 0.5s;
     }
 
     .navbar button {
@@ -102,6 +116,14 @@
         cursor: pointer;
     }
 
+    .mobile-only {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: none;
+    }
+
     .primary {
         background: var(--bg-gradient-1);
         color: #ddd;
@@ -118,6 +140,11 @@
 
     #section3 {
         background-color: #1d1d1d;
+    }
+
+    .sticky {
+        position: fixed;
+        top: 0;
     }
 
     .glass-bg {
@@ -170,6 +197,10 @@
         animation: fadeindown 1s ease-in;
     }
 
+    .slide-up {
+        animation: slide-up 0.9s cubic- bezier(0.65, 0, 0.35, 1) both;
+    }
+
     @keyframes fadeindown {
         from {
             opacity: 0;
@@ -190,19 +221,45 @@
         }
     }
 
-    @media only screen and (max-width: 600px) {
-        
-    }
+    @keyframes slide-up {
+        0% {
+            transform: translateY(100px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+}
 
+    @media only screen and (max-width: 600px) {
+        html, body {
+            font-size: 4vw;
+        }
+        
+        .navbar {
+            display: none;
+        }
+
+        .mobile-navbar {
+            display: block;;
+            background-color: var(--nav-bg);
+        }
+    }
 
 </style>
 <body>
+    
     <div id="navbar" class="navbar">
         <button>
             <h3>Home</h3>
         </button>
         <button>
             <h3>About</h3>
+        </button>
+        <button>
+            <h3>Skills</h3>
+        </button>
+        <button>
+            <h3>Projects</h3>
         </button>
         <button>
             <h3>Contact</h3>
@@ -212,7 +269,7 @@
         <section id="section1" class="section1 primary">
             <div class="vert-center">
                 <h3 class="blue-green-text">TIS I,</h3>
-                <h1>ChentuckyFriedKickens</h1>
+                <h1 class=""">ChentuckyFriedKickens</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non, illo.</p>
             </div>
         </section>
@@ -240,7 +297,7 @@
                     </div>
                     <div>
                         <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" alt="">
-                        <h3>JS</h3>
+                        <h3>Javascript</h3>
                     </div>
                 </div>
             </div>
